@@ -27,14 +27,15 @@ order: 4
 
 <div align="center">
 
-## 안녕하세요!
-### 저는 웹 백엔드 개발자 **고진혁**입니다.
+<h2>안녕하세요!</h2>
+<h3>저는 웹 백엔드 개발자 <strong>고진혁</strong>입니다.</h3>
 
 <img src="https://avatars.githubusercontent.com/u/160887371?v=4" alt="avatar" width="120" style="border-radius: 50%; margin-top: 1rem;" />
 
-> **기록은 성장의 증거다.**  
-> 개발하며 배우고, 시행착오를 거치며 나아가는 중입니다.
-
+<blockquote style="margin-top: 1rem;">
+  <string>기록은 성장의 증거다.</string>
+  개발하며 배우고, 시행착오를 거치며 나아가는 중입니다.
+</blockquote>
 </div>
 
 ---
