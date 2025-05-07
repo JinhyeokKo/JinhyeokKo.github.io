@@ -293,7 +293,6 @@ planets.dropna().describe()
 * 결합 단계: 이 연산의 결과를 결과 배열에 병합
 
 ![png](assets/img/Aggregation_And_Grouping/03.08-split-apply-combine.png)
-[figure source in Appendix](06.00-Figure-Code.ipynb#Split-Apply-Combine)
 
 ```python
 df = pd.DataFrame({'key': ['A', 'B', 'C', 'A', 'B', 'C'],
