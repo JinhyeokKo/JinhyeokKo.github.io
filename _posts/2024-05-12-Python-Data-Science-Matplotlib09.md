@@ -23,7 +23,7 @@ x = np.random.randn(1000)
 plt.hist(x);
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_2_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_2_0.png)
 
 ```python
 # use a gray background
@@ -53,7 +53,7 @@ for tick in ax.get_yticklabels():
 ax.hist(x, edgecolor='#E6E6E6', color='#EE6666');
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_3_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_3_0.png)
 
 ## Changing the Defaults: rcParams
 
@@ -80,7 +80,7 @@ plt.rc('lines', linewidth=2)
 plt.hist(x);
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_7_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_7_0.png)
 
 ```python
 # rc 매개변수를 활용했을 때 간단한 라인 플롯
@@ -88,7 +88,7 @@ for i in range(4):
     plt.plot(np.random.rand(10))
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_8_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_8_0.png)
 
 ## Stylesheets
 
@@ -123,7 +123,7 @@ plt.rcParams.update(IPython_default);
 hist_and_lines()
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_14_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_14_0.png)
 
 ### FiveThiryEight style
 
@@ -132,7 +132,7 @@ with plt.style.context('fivethirtyeight'):
     hist_and_lines()
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_16_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_16_0.png)
 
 ### ggplot
 
@@ -141,7 +141,7 @@ with plt.style.context('ggplot'):
     hist_and_lines()
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_18_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_18_0.png)
 
 ### Bayesian Methods for Hackers style
 
@@ -150,7 +150,7 @@ with plt.style.context('bmh'):
     hist_and_lines()
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_20_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_20_0.png)
 
 ### Dark background
 
@@ -159,7 +159,7 @@ with plt.style.context('dark_background'):
     hist_and_lines()
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_22_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_22_0.png)
 
 ### Grayscale
 
@@ -168,7 +168,7 @@ with plt.style.context('grayscale'):
     hist_and_lines()
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_24_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_24_0.png)
 
 ### Seaborn style
 
@@ -178,6 +178,6 @@ import seaborn
 hist_and_lines()
 ```
 
-![png](_posts/Settings_And_Stylesheets_files/Settings_And_Stylesheets_26_0.png)
+![png](assets/img/Settings_And_Stylesheets_files/Settings_And_Stylesheets_26_0.png)
     
 

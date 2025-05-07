@@ -37,14 +37,14 @@ Z = f(X, Y)
 plt.contour(X, Y, Z, colors='black');
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_5_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_5_0.png)
 
 ```python
 # 3차원 데이터 색을 입힌 등고선으로 시각화
 plt.contour(X, Y, Z, 20, cmap='RdGy');
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_6_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_6_0.png)
 
 ```python
 # 색을 채운 등고선으로 시각화
@@ -52,7 +52,7 @@ plt.contourf(X, Y, Z, 20, cmap='RdGy')
 plt.colorbar();
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_7_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_7_0.png)
 
 ```python
 # 2차원 데이터 그리드를 이미지로 해석
@@ -63,7 +63,7 @@ plt.colorbar()
 
     <matplotlib.colorbar.Colorbar at 0x1ab1dc43aa0>
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_8_1.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_8_1.png)
 
 ```python
 contours = plt.contour(X, Y, Z, 3, colors='black')
@@ -75,7 +75,7 @@ plt.imshow(Z, extent=[0, 5, 0, 5], origin='lower',
 plt.colorbar();
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_9_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_9_0.png)
 
 ## Histograms, Binnings, and Density
 
@@ -84,7 +84,7 @@ data = np.random.randn(1000)
 plt.hist(data);
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_11_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_11_0.png)
 
 ```python
 # 맞춤 설정 히스토그램
@@ -93,7 +93,7 @@ plt.hist(data, bins=30, density=True, alpha=0.5,
          edgecolor='none');
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_12_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_12_0.png)
 
 ```python
 # 다중 히스토그램을 겹쳐서 표현한 플로팅
@@ -108,7 +108,7 @@ plt.hist(x2, **kwargs)
 plt.hist(x3, **kwargs);
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_13_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_13_0.png)
 
 ```python
 # 계산만 하고 특정 구간에 해당하는 점의 개수만 셀 때
@@ -136,7 +136,7 @@ cb = plt.colorbar()
 cb.set_label('counts in bin')
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_18_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_18_0.png)
 
 ```python
 counts, xedges, yedges = np.histogram2d(x, y, bins=30)
@@ -150,7 +150,7 @@ plt.hexbin(x, y, gridsize=30, cmap='Blues')
 cb = plt.colorbar(label='count in bin')
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_21_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_21_0.png)
 
 ### Kernel density estimation
 
@@ -177,6 +177,6 @@ cb = plt.colorbar()
 cb.set_label("density")
 ```
 
-![png](_posts/Density_And_Contour_Plots_files/Density_And_Contour_Plots_23_0.png)
+![png](assets/img/Density_And_Contour_Plots_files/Density_And_Contour_Plots_23_0.png)
     
 

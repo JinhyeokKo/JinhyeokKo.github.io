@@ -411,7 +411,7 @@ seaborn.set()
 sp500.plot();
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_41_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_41_0.png)
 
 ```python
 # resample() --> 데이터를 집계 --> 전년도 평균 보여줌
@@ -424,7 +424,7 @@ plt.legend(['input', 'resample', 'asfreq'],
            loc='upper left');
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_42_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_42_0.png)
 
 ```python
 fig, ax = plt.subplots(2, sharex=True)
@@ -437,7 +437,7 @@ data.asfreq('D', method='ffill').plot(ax=ax[1], style='--o')
 ax[1].legend(["back-fill", "forward-fill"]);
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_43_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_43_0.png)
 
 ### Time-shifts
 
@@ -449,7 +449,7 @@ ROI.plot()
 plt.ylabel('% Return on Investment after 1 year');
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_45_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_45_0.png)
 
 ### Rolling windows
 
@@ -465,7 +465,7 @@ ax = data.plot(style=['-', '--', ':'])
 ax.lines[0].set_alpha(0.3)
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_47_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_47_0.png)
 
 ## Example: Visualizing Seattle Bicycle Counts
 
@@ -628,7 +628,7 @@ data.plot()
 plt.ylabel('Hourly Bicycle Count');
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_52_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_52_0.png)
 
 ```python
 # 밀집도를 낮추기 위해 주 단위로 리샘플링
@@ -637,7 +637,7 @@ weekly.plot(style=[':', '--', '-'])
 plt.ylabel('Weekly bicycle count');
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_53_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_53_0.png)
 
 ```python
 # 30일 롤링 평균을 구해 데이터가 중심에 오게 하기
@@ -646,7 +646,7 @@ daily.rolling(30, center=True).sum().plot(style=[':', '--', '-'])
 plt.ylabel('mean hourly count');
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_54_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_54_0.png)
 
 ```python
 # 가우스 윈도우 함수 사용
@@ -654,7 +654,7 @@ daily.rolling(50, center=True,
               win_type='gaussian').sum(std=10).plot(style=[':', '--', '-']);
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_55_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_55_0.png)
 
 ### Digging into the data
 
@@ -665,7 +665,7 @@ hourly_ticks = 4 * 60 * 60 * np.arange(6)
 by_time.plot(xticks=hourly_ticks, style=[':', '--', '-']);
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_57_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_57_0.png)
 
 ```python
 # 요일에 따른 통행량
@@ -674,7 +674,7 @@ by_weekday.index = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']
 by_weekday.plot(style=[':', '--', '-']);
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_58_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_58_0.png)
 
 ```python
 # 주말 표시 플래그와 시간대별 분류
@@ -693,6 +693,6 @@ by_time.loc['Weekend'].plot(ax=ax[1], title='Weekends',
                             xticks=hourly_ticks, style=[':', '--', '-']);
 ```
 
-![png](_posts/Working_With_Time_Series_files/Working_With_Time_Series_60_0.png)
+![png](assets/img/Working_With_Time_Series_files/Working_With_Time_Series_60_0.png)
     
 

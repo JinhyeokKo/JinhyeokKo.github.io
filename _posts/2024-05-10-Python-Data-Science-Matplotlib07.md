@@ -44,7 +44,7 @@ fig, ax = plt.subplots(figsize=(12, 4))
 births_by_date.plot(ax=ax);
 ```
 
-![png](_posts/Text_And_Annotation_files/Text_And_Annotation_4_0.png)
+![png](assets/img/Text_And_Annotation_files/Text_And_Annotation_4_0.png)
 
 ```python
 fig, ax = plt.subplots(figsize=(12, 4))
@@ -73,7 +73,7 @@ ax.xaxis.set_major_formatter(plt.NullFormatter())
 ax.xaxis.set_minor_formatter(mpl.dates.DateFormatter('%h'));
 ```
 
-![png](_posts/Text_And_Annotation_files/Text_And_Annotation_5_0.png)
+![png](assets/img/Text_And_Annotation_files/Text_And_Annotation_5_0.png)
 
 ## Transforms and Text Position
 
@@ -91,7 +91,7 @@ ax.text(0.5, 0.1, ". Axes: (0.5, 0.1)", transform=ax.transAxes)
 ax.text(0.2, 0.2, ". Figure: (0.2, 0.2)", transform=fig.transFigure);
 ```
 
-![png](_posts/Text_And_Annotation_files/Text_And_Annotation_8_0.png)
+![png](assets/img/Text_And_Annotation_files/Text_And_Annotation_8_0.png)
 
 ```python
 # 축 한곗값을 바꾸면 transData 좌표만 영향
@@ -100,7 +100,7 @@ ax.set_ylim(-6, 6)
 fig
 ```
 
-![png](_posts/Text_And_Annotation_files/Text_And_Annotation_9_0.png)
+![png](assets/img/Text_And_Annotation_files/Text_And_Annotation_9_0.png)
 
 ## Arrows and Annotation
 
@@ -122,7 +122,7 @@ ax.annotate('local minimum', xy=(5 * np.pi, -1), xytext=(2, -6),
                             connectionstyle="angle3,angleA=0,angleB=-90"));
 ```
 
-![png](_posts/Text_And_Annotation_files/Text_And_Annotation_11_0.png)
+![png](assets/img/Text_And_Annotation_files/Text_And_Annotation_11_0.png)
 
 ```python
 fig, ax = plt.subplots(figsize=(12, 4))
@@ -177,6 +177,6 @@ ax.xaxis.set_minor_formatter(mpl.dates.DateFormatter('%h'));
 ax.set_ylim(3600, 5400);
 ```
 
-![png](_posts/Text_And_Annotation_files/Text_And_Annotation_12_0.png)
+![png](assets/img/Text_And_Annotation_files/Text_And_Annotation_12_0.png)
     
 

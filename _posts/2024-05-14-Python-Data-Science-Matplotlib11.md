@@ -39,21 +39,21 @@ for col in 'xy':
     plt.hist(data[col], density=True, alpha=0.5)
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_6_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_6_0.png)
 
 ```python
 # 분포 시각화를 위한 커널 밀도 추정치
 sns.kdeplot(data=data, fill=True);
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_7_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_7_0.png)
 
 ```python
 # 2차원 커널 밀도 그래프
 sns.kdeplot(data, x='x', y='y');
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_8_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_8_0.png)
 
 ```python
 # 결합분포와 한계분포
@@ -61,7 +61,7 @@ with sns.axes_style('white'):
     sns.jointplot(data=data, x="x", y="y", kind='kde');
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_9_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_9_0.png)
 
 ```python
 # 육각형 기반
@@ -69,7 +69,7 @@ with sns.axes_style('white'):
     sns.jointplot(data=data, x="x", y="y", kind='hex');
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_10_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_10_0.png)
 
 ### Pair plots
 
@@ -154,7 +154,7 @@ iris.head()
 sns.pairplot(iris, hue='species', height=2.5);
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_13_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_13_0.png)
 
 ### Faceted histograms
 
@@ -253,7 +253,7 @@ grid = sns.FacetGrid(tips, row="sex", col="time", margin_titles=True)
 grid.map(plt.hist, "tip_pct", bins=np.linspace(0, 40, 15));
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_16_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_16_0.png)
 
 ### 범주형 플롯 catplots
 
@@ -263,7 +263,7 @@ with sns.axes_style(style='ticks'):
     g.set_axis_labels("Day", "Total Bill");
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_18_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_18_0.png)
 
 ### Joint distributions
 
@@ -273,14 +273,14 @@ with sns.axes_style('white'):
     sns.jointplot(x="total_bill", y="tip", data=tips, kind='hex')
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_20_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_20_0.png)
 
 ```python
 # 자동 커널 밀도 추정과 회귀 분석 수행
 sns.jointplot(x="total_bill", y="tip", data=tips, kind='reg');
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_21_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_21_0.png)
 
 ### Bar plots
 
@@ -374,7 +374,7 @@ with sns.axes_style('white'):
     g.set_xticklabels(step=5)
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_24_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_24_0.png)
 
 ```python
 # 연도 및 유형별로 발견된 행성 수
@@ -384,7 +384,7 @@ with sns.axes_style('white'):
     g.set_ylabels('Number of Planets Discovered')
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_25_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_25_0.png)
 
 ## Example: Exploring Marathon Finishing Times
 
@@ -650,7 +650,7 @@ with sns.axes_style('white'):
                     np.linspace(8000, 32000), ':k')
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_32_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_32_0.png)
 
 ```python
 # 주자가 네거티브 스플릿 주자인지 포지티브 스플릿 주자인지 정도를 측정하는 열
@@ -747,7 +747,7 @@ sns.histplot(data['split_frac'], kde=False);
 plt.axvline(0, color="k", linestyle="--");
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_34_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_34_0.png)
 
 ```python
 # 네거티브 스플릿 수
@@ -764,7 +764,7 @@ g.map(plt.scatter, alpha=0.8)
 g.add_legend();
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_36_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_36_0.png)
 
 ```python
 # 남성과 여성 사이 차이
@@ -773,7 +773,7 @@ sns.kdeplot(data.split_frac[data.gender == 'W'], label='women', fill=True)
 plt.xlabel('split_frac');
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_37_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_37_0.png)
 
 ```python
 # 나이의 함수로 분포 비교
@@ -781,7 +781,7 @@ sns.violinplot(x="gender", y="split_frac", data=data, hue="gender",
                palette=["lightblue", "lightpink"], legend=False);
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_38_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_38_0.png)
 
 ```python
 data['age_dec'] = data.age.map(lambda age: 10 * (age // 10))
@@ -888,7 +888,7 @@ with sns.axes_style(style=None):
                    palette=["lightpink", "lightblue"]);
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_40_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_40_0.png)
 
 ```python
 # 데이터 표본이 작아 80대 이상 여성의 능력치 이상
@@ -904,6 +904,6 @@ g = sns.lmplot(x='final_sec', y='split_frac', col='gender', data=data,
 g.map(plt.axhline, y=0.1, color="k", ls=":");
 ```
 
-![png](_posts/Visualization_With_Seaborn_files/Visualization_With_Seaborn_42_0.png)
+![png](assets/img/Visualization_With_Seaborn_files/Visualization_With_Seaborn_42_0.png)
     
 

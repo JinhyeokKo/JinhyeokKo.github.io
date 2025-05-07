@@ -24,7 +24,7 @@ ax1 = plt.axes()  # standard axes
 ax2 = plt.axes([0.65, 0.65, 0.2, 0.2])
 ```
 
-![png](_posts/Multiple_Subplots_files/Multiple_Subplots_3_0.png)
+![png](assets/img/Multiple_Subplots_files/Multiple_Subplots_3_0.png)
 
 ```python
 fig = plt.figure()
@@ -38,7 +38,7 @@ ax1.plot(np.sin(x))
 ax2.plot(np.cos(x));
 ```
 
-![png](_posts/Multiple_Subplots_files/Multiple_Subplots_4_0.png)
+![png](assets/img/Multiple_Subplots_files/Multiple_Subplots_4_0.png)
 
 ## plt.subplot: Simple Grids of Subplots
 
@@ -49,7 +49,7 @@ for i in range(1, 7):
              fontsize=18, ha='center')
 ```
 
-![png](_posts/Multiple_Subplots_files/Multiple_Subplots_6_0.png)
+![png](assets/img/Multiple_Subplots_files/Multiple_Subplots_6_0.png)
 
 ```python
 fig = plt.figure()
@@ -60,7 +60,7 @@ for i in range(1, 7):
             fontsize=18, ha='center')
 ```
 
-![png](_posts/Multiple_Subplots_files/Multiple_Subplots_7_0.png)
+![png](assets/img/Multiple_Subplots_files/Multiple_Subplots_7_0.png)
 
 ## plt.subplots: The Whole Grid in One Go
 
@@ -68,7 +68,7 @@ for i in range(1, 7):
 fig, ax = plt.subplots(2, 3, sharex='col', sharey='row')
 ```
 
-![png](_posts/Multiple_Subplots_files/Multiple_Subplots_9_0.png)
+![png](assets/img/Multiple_Subplots_files/Multiple_Subplots_9_0.png)
 
 ```python
 # 축이 2차원 배열 안에 있어 [행, 열]로 인덱싱할 수 있음
@@ -79,7 +79,7 @@ for i in range(2):
 fig
 ```
 
-![png](_posts/Multiple_Subplots_files/Multiple_Subplots_10_0.png)
+![png](assets/img/Multiple_Subplots_files/Multiple_Subplots_10_0.png)
 
 ## plt.GridSpec: More Complicated Arrangements
 
@@ -92,7 +92,7 @@ plt.subplot(grid[1, :2])
 plt.subplot(grid[1, 2]);
 ```
 
-![png](_posts/Multiple_Subplots_files/Multiple_Subplots_12_0.png)
+![png](assets/img/Multiple_Subplots_files/Multiple_Subplots_12_0.png)
 
 ```python
 # 정규 분포 데이터 만들기
@@ -123,6 +123,6 @@ y_hist.hist(y, 40, histtype='stepfilled',
 y_hist.invert_xaxis()
 ```
 
-![png](_posts/Multiple_Subplots_files/Multiple_Subplots_13_0.png)
+![png](assets/img/Multiple_Subplots_files/Multiple_Subplots_13_0.png)
     
 

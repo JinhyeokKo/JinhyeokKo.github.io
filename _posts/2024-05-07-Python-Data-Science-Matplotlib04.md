@@ -27,7 +27,7 @@ ax.axis('equal')
 leg = ax.legend();
 ```
 
-![png](_posts/Customizing_Legends_files/Customizing_Legends_2_0.png)
+![png](assets/img/Customizing_Legends_files/Customizing_Legends_2_0.png)
 
 ```python
 # 테두리 제거 위치 지정
@@ -35,7 +35,7 @@ ax.legend(loc='upper left', frameon=False)
 fig
 ```
 
-![png](_posts/Customizing_Legends_files/Customizing_Legends_3_0.png)
+![png](assets/img/Customizing_Legends_files/Customizing_Legends_3_0.png)
 
 ```python
 # 열 개수 지정
@@ -43,7 +43,7 @@ ax.legend(frameon=False, loc='lower center', ncol=2)
 fig
 ```
 
-![png](_posts/Customizing_Legends_files/Customizing_Legends_4_0.png)
+![png](assets/img/Customizing_Legends_files/Customizing_Legends_4_0.png)
 
 ```python
 # 둥근 모서리 박스 테두리
@@ -51,7 +51,7 @@ ax.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1)
 fig
 ```
 
-![png](_posts/Customizing_Legends_files/Customizing_Legends_5_0.png)
+![png](assets/img/Customizing_Legends_files/Customizing_Legends_5_0.png)
 
 ## Choosing Elements for the Legend
 
@@ -64,7 +64,7 @@ lines = plt.plot(x, y)
 plt.legend(lines[:2], ['first', 'second']);
 ```
 
-![png](_posts/Customizing_Legends_files/Customizing_Legends_7_0.png)
+![png](assets/img/Customizing_Legends_files/Customizing_Legends_7_0.png)
 
 ```python
 # 플롯 요소에 레이블 적용
@@ -74,7 +74,7 @@ plt.plot(x, y[:, 2:])
 plt.legend(framealpha=1, frameon=True);
 ```
 
-![png](_posts/Customizing_Legends_files/Customizing_Legends_8_0.png)
+![png](assets/img/Customizing_Legends_files/Customizing_Legends_8_0.png)
 
 ## Legend for Size of Points
 
@@ -109,7 +109,7 @@ plt.legend(scatterpoints=1, frameon=False, labelspacing=1, title='City Area')
 plt.title('California Cities: Area and Population');
 ```
 
-![png](_posts/Customizing_Legends_files/Customizing_Legends_10_0.png)
+![png](assets/img/Customizing_Legends_files/Customizing_Legends_10_0.png)
 
 ## Multiple Legends
 
@@ -139,6 +139,6 @@ leg = Legend(ax, lines[2:], ['line C', 'line D'],
 ax.add_artist(leg);
 ```
 
-![png](_posts/Customizing_Legends_files/Customizing_Legends_12_0.png)
+![png](assets/img/Customizing_Legends_files/Customizing_Legends_12_0.png)
     
 

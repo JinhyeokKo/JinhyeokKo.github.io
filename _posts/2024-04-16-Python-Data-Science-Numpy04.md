@@ -94,6 +94,6 @@ plt.xlabel('height (cm)')
 plt.ylabel('number');
 ```
 
-![png](_posts/Aggregate_Function_files/Aggregate_Function_6_0.png)
+![png](assets/img/Aggregate_Function_files/Aggregate_Function_6_0.png)
     
 

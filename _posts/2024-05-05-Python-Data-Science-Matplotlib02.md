@@ -27,7 +27,7 @@ y = np.sin(x)
 plt.plot(x, y, 'o', color='black');
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_3_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_3_0.png)
 
 ```python
 # 점의 형태
@@ -39,7 +39,7 @@ plt.legend(numpoints=1)
 plt.xlim(0, 1.8);
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_4_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_4_0.png)
 
 ```python
 # 선과 점 표시를 결합
@@ -47,7 +47,7 @@ plt.xlim(0, 1.8);
 plt.plot(x, y, '-ok');
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_5_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_5_0.png)
 
 ```python
 # 선과 점 맞춤 설정
@@ -59,7 +59,7 @@ plt.plot(x, y, '-p', color='gray',
 plt.ylim(-1.2, 1.2);
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_6_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_6_0.png)
 
 ## Scatter Plots with plt.scatter
 
@@ -67,7 +67,7 @@ plt.ylim(-1.2, 1.2);
 plt.scatter(x, y, marker='o');
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_8_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_8_0.png)
 
 ```python
 rng = np.random.RandomState(0)
@@ -81,7 +81,7 @@ plt.scatter(x, y, c=colors, s=sizes, alpha=0.3,
 plt.colorbar();  # 색상 척도 표시 show color scale
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_9_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_9_0.png)
 
 ```python
 from sklearn.datasets import load_iris
@@ -95,7 +95,7 @@ plt.xlabel(iris.feature_names[0])
 plt.ylabel(iris.feature_names[1]);
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_10_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_10_0.png)
 
 ## plot Versus scatter: A Note on Efficiency
 
@@ -115,7 +115,7 @@ y = np.sin(x) + dy * np.random.randn(50)
 plt.errorbar(x, y, yerr=dy, fmt='.k');
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_15_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_15_0.png)
 
 ```python
 # 오차 막대 맞춤 설정
@@ -123,7 +123,7 @@ plt.errorbar(x, y, yerr=dy, fmt='o', color='black',
              ecolor='lightgray', elinewidth=3, capsize=0);
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_16_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_16_0.png)
 
 ### Continuous Errors
 
@@ -155,6 +155,6 @@ plt.fill_between(xfit, yfit - dyfit, yfit + dyfit,
 plt.xlim(0, 10);
 ```
 
-![png](_posts/Simple_Scatter_Plots_files/Simple_Scatter_Plots_19_0.png)
+![png](assets/img/Simple_Scatter_Plots_files/Simple_Scatter_Plots_19_0.png)
     
 

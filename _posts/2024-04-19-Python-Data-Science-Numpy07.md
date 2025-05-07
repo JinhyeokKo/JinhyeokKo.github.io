@@ -121,7 +121,7 @@ seaborn.set()  # 플롯 스타일 설정
 plt.scatter(X[:, 0], X[:, 1]);
 ```
 
-![png](_posts/Fancy_Indexing_files/Fancy_Indexing_6_0.png)
+![png](assets/img/Fancy_Indexing_files/Fancy_Indexing_6_0.png)
 
 ```python
 # 임의의 점 20개 선택 --> 원본 배열의 일부 선택
@@ -139,7 +139,7 @@ plt.scatter(X[:, 0], X[:, 1], alpha=0.3)
 plt.scatter(selection[:, 0], selection[:, 1], facecolor='black', s=100, alpha=0.3);
 ```
 
-![png](_posts/Fancy_Indexing_files/Fancy_Indexing_8_0.png)
+![png](assets/img/Fancy_Indexing_files/Fancy_Indexing_8_0.png)
 
 ## 팬시 인덱싱으로 값 변경
 
@@ -194,7 +194,7 @@ np.add.at(counts, i, 1)
 plt.plot(bins, counts, drawstyle='steps');
 ```
 
-![png](_posts/Fancy_Indexing_files/Fancy_Indexing_13_0.png)
+![png](assets/img/Fancy_Indexing_files/Fancy_Indexing_13_0.png)
 
 ```python
 # 위 처럼 직접 계산하지 않고 hist 사용
@@ -202,7 +202,7 @@ plt.plot(bins, counts, drawstyle='steps');
 plt.hist(x, bins, histtype='step');
 ```
 
-![png](_posts/Fancy_Indexing_files/Fancy_Indexing_14_0.png)
+![png](assets/img/Fancy_Indexing_files/Fancy_Indexing_14_0.png)
 
 ```python
 # 소규모 데이터에서 시간
