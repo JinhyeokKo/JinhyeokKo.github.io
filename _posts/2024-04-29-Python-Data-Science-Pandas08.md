@@ -14,21 +14,21 @@ import pandas as pd
 
 
 class display(object):
-    """Display HTML representation of multiple objects"""
-    template = """<div style="float: left; padding: 10px;">
+  """Display HTML representation of multiple objects"""
+  template = """<div style="float: left; padding: 10px;">
     <p style='font-family:"Courier New", Courier, monospace'>{0}</p>{1}
     </div>"""
 
-    def __init__(self, *args):
-        self.args = args
+  def __init__(self, *args):
+    self.args = args
 
-    def _repr_html_(self):
-        return '\n'.join(self.template.format(a, eval(a)._repr_html_())
-                         for a in self.args)
+  def _repr_html_(self):
+    return '\n'.join(self.template.format(a, eval(a)._repr_html_())
+                     for a in self.args)
 
-    def __repr__(self):
-        return '\n\n'.join(a + '\n' + repr(eval(a))
-                           for a in self.args)
+  def __repr__(self):
+    return '\n\n'.join(a + '\n' + repr(eval(a))
+                       for a in self.args)
 ```
 
 ## Planets Data
@@ -317,7 +317,7 @@ df
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr>
       <th></th>
       <th>key</th>
       <th>data</th>
@@ -371,7 +371,8 @@ display("df.groupby('key').sum()", "df.groupby('key').mean()", "df.groupby('key'
 ```
 
 <div style="float: left; padding: 10px;">
-    <p style='font-family:"Courier New", Courier, monospace'>df.groupby('key').sum()</p><div>
+    <p style='font-family:"Courier New", Courier, monospace'>df.groupby('key').sum()</p>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -389,12 +390,8 @@ display("df.groupby('key').sum()", "df.groupby('key').mean()", "df.groupby('key'
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th>data</th>
-    </tr>
-    <tr>
       <th>key</th>
-      <th></th>
+      <th>data</th>
     </tr>
   </thead>
   <tbody>
@@ -413,7 +410,7 @@ display("df.groupby('key').sum()", "df.groupby('key').mean()", "df.groupby('key'
   </tbody>
 </table>
 </div>
-    </div>
+</div>
 <div style="float: left; padding: 10px;">
     <p style='font-family:"Courier New", Courier, monospace'>df.groupby('key').mean()</p><div>
 <style scoped>
@@ -433,12 +430,8 @@ display("df.groupby('key').sum()", "df.groupby('key').mean()", "df.groupby('key'
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th>data</th>
-    </tr>
-    <tr>
       <th>key</th>
-      <th></th>
+      <th>data</th>
     </tr>
   </thead>
   <tbody>
@@ -477,12 +470,8 @@ display("df.groupby('key').sum()", "df.groupby('key').mean()", "df.groupby('key'
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th>data</th>
-    </tr>
-    <tr>
       <th>key</th>
-      <th></th>
+      <th>data</th>
     </tr>
   </thead>
   <tbody>
@@ -502,6 +491,7 @@ display("df.groupby('key').sum()", "df.groupby('key').mean()", "df.groupby('key'
 </table>
 </div>
     </div>
+<div style="clear: both;"></div>
 
 ### The GroupBy object
 
@@ -544,7 +534,7 @@ GroupBy 객체는 그룹을 직접 순회할 수 있도록 지원하며, 각 그
 
 ```python
 for (method, group) in planets.groupby('method'):
-    print("{0:30s} shape={1}".format(method, group.shape))
+  print("{0:30s} shape={1}".format(method, group.shape))
 ```
 
     Astrometry                     shape=(2, 6)
@@ -801,7 +791,7 @@ filter() 함수는 그룹이 필터링을 통과하는지 아닌지를 지정하
 ```python
 # 그룹 속성을 기준으로 데이터를 걸러냄
 def filter_func(x):
-    return x['data2'].std() > 4
+  return x['data2'].std() > 4
 
 
 display('df', "df.groupby('key').std()", "df.groupby('key').filter(filter_func)")
@@ -976,6 +966,7 @@ display('df', "df.groupby('key').std()", "df.groupby('key').filter(filter_func)"
 </table>
 </div>
     </div>
+<div style="clear: both;"></div>
 
 #### Transformation
 
@@ -1051,9 +1042,9 @@ DataFrame을 취해 Pandas 객체나 스칼라를 반환
 ```python
 # 첫 번째 열을 두 번째 열의 합계로 정규화
 def norm_by_data2(x):
-    # x is a DataFrame of group values
-    x['data1'] /= x['data2'].sum()
-    return x
+  # x is a DataFrame of group values
+  x['data1'] /= x['data2'].sum()
+  return x
 
 
 display('df', "df.groupby('key').apply(norm_by_data2, include_groups=False)")
@@ -1194,6 +1185,7 @@ display('df', "df.groupby('key').apply(norm_by_data2, include_groups=False)")
 </table>
 </div>
     </div>
+<div style="clear: both;"></div>
 
 ### 분할 키 지정 Specifying the split key
 
@@ -1367,6 +1359,7 @@ display('df', 'df.groupby(L).sum()', "df.groupby(df['key']).sum()")
 </table>
 </div>
     </div>
+<div style="clear: both;"></div>
 
 #### 인덱스를 그룹에 매핑한 딕셔너리나 시리즈 A dictionary or series mapping index to group
 
@@ -1484,6 +1477,7 @@ display('df2', 'df2.groupby(mapping).sum()')
 </table>
 </div>
     </div>
+<div style="clear: both;"></div>
 
 #### Any Python function
 
@@ -1604,6 +1598,7 @@ display('df2', 'df2.groupby(str.lower).mean()')
 </table>
 </div>
     </div>
+<div style="clear: both;"></div>
 
 #### A list of valid keys
 
