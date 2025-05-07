@@ -109,7 +109,3 @@ order: 4
 </div>
 
 </div>
-
-<p align="center" style="font-size: 0.9rem; color: gray;">
-이 블로그는 Jekyll + Chirpy 테마로 구축되었습니다.
-</p>
