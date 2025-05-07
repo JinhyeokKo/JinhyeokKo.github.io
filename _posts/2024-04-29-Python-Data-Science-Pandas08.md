@@ -292,7 +292,7 @@ planets.dropna().describe()
 * 적용 단계: 개별 그룹 내에서 일반적으로 집계, 변환, 필터링 같은 함수를 계산
 * 결합 단계: 이 연산의 결과를 결과 배열에 병합
 
-![](./03.08-split-apply-combine.png)
+![png](assets/img/03.08-split-apply-combine.png)
 [figure source in Appendix](06.00-Figure-Code.ipynb#Split-Apply-Combine)
 
 ```python
