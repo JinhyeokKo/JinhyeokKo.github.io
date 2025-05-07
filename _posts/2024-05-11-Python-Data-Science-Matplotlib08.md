@@ -24,7 +24,7 @@ ax = plt.axes(xscale='log', yscale='log')
 ax.grid();
 ```
 
-![png](Customizing_Ticks_files/Customizing_Ticks_3_0.png)
+![png](_posts/Customizing_Ticks_files/Customizing_Ticks_3_0.png)
 
 ```python
 print(ax.xaxis.get_major_locator())
@@ -48,7 +48,7 @@ ax.yaxis.set_major_locator(plt.NullLocator())
 ax.xaxis.set_major_formatter(plt.NullFormatter())
 ```
 
-![png](Customizing_Ticks_files/Customizing_Ticks_6_0.png)
+![png](_posts/Customizing_Ticks_files/Customizing_Ticks_6_0.png)
 
 ```python
 fig, ax = plt.subplots(5, 5, figsize=(5, 5))
@@ -66,7 +66,7 @@ for i in range(5):
         ax[i, j].imshow(faces[10 * i + j], cmap="bone")
 ```
 
-![png](Customizing_Ticks_files/Customizing_Ticks_7_0.png)
+![png](_posts/Customizing_Ticks_files/Customizing_Ticks_7_0.png)
 
 ## Reducing or Increasing the Number of Ticks
 
@@ -74,7 +74,7 @@ for i in range(5):
 fig, ax = plt.subplots(4, 4, sharex=True, sharey=True)
 ```
 
-![png](Customizing_Ticks_files/Customizing_Ticks_9_0.png)
+![png](_posts/Customizing_Ticks_files/Customizing_Ticks_9_0.png)
 
 ```python
 # 모든 축에 대해 x와 y의 주 눈금의 위치 지시자를 설정
@@ -85,7 +85,7 @@ for axi in ax.flat:
 fig
 ```
 
-![png](Customizing_Ticks_files/Customizing_Ticks_10_0.png)
+![png](_posts/Customizing_Ticks_files/Customizing_Ticks_10_0.png)
 
 ## Fancy Tick Formats
 
@@ -103,7 +103,7 @@ ax.axis('equal')
 ax.set_xlim(0, 3 * np.pi);
 ```
 
-![png](Customizing_Ticks_files/Customizing_Ticks_12_0.png)
+![png](_posts/Customizing_Ticks_files/Customizing_Ticks_12_0.png)
 
 ```python
 ax.xaxis.set_major_locator(plt.MultipleLocator(np.pi / 2))
@@ -111,7 +111,7 @@ ax.xaxis.set_minor_locator(plt.MultipleLocator(np.pi / 4))
 fig
 ```
 
-![png](Customizing_Ticks_files/Customizing_Ticks_13_0.png)
+![png](_posts/Customizing_Ticks_files/Customizing_Ticks_13_0.png)
 
 ```python
 def format_func(value, tick_number):
@@ -133,7 +133,7 @@ ax.xaxis.set_major_formatter(plt.FuncFormatter(format_func))
 fig
 ```
 
-![png](Customizing_Ticks_files/Customizing_Ticks_14_0.png)
+![png](_posts/Customizing_Ticks_files/Customizing_Ticks_14_0.png)
 
 ## Summary of Formatters and Locators
 

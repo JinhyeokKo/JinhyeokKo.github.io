@@ -25,7 +25,7 @@ plt.imshow(I)
 plt.colorbar();
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_2_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_2_0.png)
 
 ## Customizing Colorbars
 
@@ -34,7 +34,7 @@ plt.colorbar();
 plt.imshow(I, cmap='gray');
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_4_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_4_0.png)
 
 ### Choosing the Colormap
 
@@ -79,25 +79,25 @@ def view_colormap(cmap):
 view_colormap('jet')
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_8_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_8_0.png)
 
 ```python
 view_colormap('viridis')
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_9_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_9_0.png)
 
 ```python
 view_colormap('cubehelix')
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_10_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_10_0.png)
 
 ```python
 view_colormap('RdBu')
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_11_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_11_0.png)
 
 ### Color limits and extensions
 
@@ -118,7 +118,7 @@ plt.colorbar(extend='both')
 plt.clim(-1, 1);
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_13_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_13_0.png)
 
 ### Discrete Color Bars
 
@@ -128,7 +128,7 @@ plt.colorbar()
 plt.clim(-1, 1);
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_15_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_15_0.png)
 
 ## Example: Handwritten Digits
 
@@ -144,7 +144,7 @@ for i, axi in enumerate(ax.flat):
     axi.set(xticks=[], yticks=[])
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_17_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_17_0.png)
 
 ```python
 # IsoMap을 사용해 숫자를 2차원에 사영
@@ -162,6 +162,6 @@ plt.colorbar(ticks=range(6), label='digit value')
 plt.clim(-0.5, 5.5)
 ```
 
-![png](Customizing_Colorbars_files/Customizing_Colorbars_19_0.png)
+![png](_posts/Customizing_Colorbars_files/Customizing_Colorbars_19_0.png)
     
 

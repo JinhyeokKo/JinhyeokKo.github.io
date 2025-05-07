@@ -198,6 +198,6 @@ plt.imshow(z, origin='lower', extent=[0, 5, 0, 5], cmap='viridis')
 plt.colorbar();
 ```
 
-![png](Broadcasting_files/Broadcasting_13_0.png)
+![png](_posts/Broadcasting_files/Broadcasting_13_0.png)
     
 

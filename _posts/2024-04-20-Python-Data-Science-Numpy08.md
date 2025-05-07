@@ -122,7 +122,7 @@ seaborn.set()
 plt.scatter(X[:, 0], X[:, 1], s=100);
 ```
 
-![png](Sorting_Arrays_files/Sorting_Arrays_10_0.png)
+![png](_posts/Sorting_Arrays_files/Sorting_Arrays_10_0.png)
 
 ```python
 # 제곱 거리 행렬 계산
@@ -166,6 +166,6 @@ for i in range(X.shape[0]):
         plt.plot(*zip(X[j], X[i]), color='black')
 ```
 
-![png](Sorting_Arrays_files/Sorting_Arrays_13_0.png)
+![png](_posts/Sorting_Arrays_files/Sorting_Arrays_13_0.png)
     
 

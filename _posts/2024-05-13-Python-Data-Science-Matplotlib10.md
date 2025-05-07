@@ -20,7 +20,7 @@ fig = plt.figure()
 ax = plt.axes(projection='3d')
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_1_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_1_0.png)
 
 ## Three-dimensional Points and Lines
 
@@ -40,7 +40,7 @@ ydata = np.cos(zdata) + 0.1 * np.random.randn(100)
 ax.scatter3D(xdata, ydata, zdata, c=zdata, cmap='Greens');
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_3_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_3_0.png)
 
 ## Three-dimensional Contour Plots
 
@@ -65,7 +65,7 @@ ax.set_ylabel('y')
 ax.set_zlabel('z');
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_6_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_6_0.png)
 
 ```python
 # 고도와 방위각 설정
@@ -73,7 +73,7 @@ ax.view_init(60, 35)
 fig
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_7_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_7_0.png)
 
 ## Wireframes and Surface Plots
 
@@ -84,7 +84,7 @@ ax.plot_wireframe(X, Y, Z, color='black')
 ax.set_title('wireframe');
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_9_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_9_0.png)
 
 ```python
 ax = plt.axes(projection='3d')
@@ -93,7 +93,7 @@ ax.plot_surface(X, Y, Z, rstride=1, cstride=1,
 ax.set_title('surface');
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_10_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_10_0.png)
 
 ```python
 # 극좌표 표면도
@@ -110,7 +110,7 @@ ax.plot_surface(X, Y, Z, rstride=1, cstride=1,
                 cmap='viridis', edgecolor='none');
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_11_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_11_0.png)
 
 ## Surface Triangulations
 
@@ -128,7 +128,7 @@ ax = plt.axes(projection='3d')
 ax.scatter(x, y, z, c=z, cmap='viridis', linewidth=0.5);
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_14_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_14_0.png)
 
 ```python
 # 삼각측량 표면도
@@ -137,7 +137,7 @@ ax.plot_trisurf(x, y, z,
                 cmap='viridis', edgecolor='none');
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_15_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_15_0.png)
 
 ### Example: Visualizing a Möbius strip
 
@@ -176,6 +176,6 @@ ax.set_ylim(-1, 1);
 ax.set_zlim(-1, 1);
 ```
 
-![png](Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_20_0.png)
+![png](_posts/Three_Dimensional_Plotting_files/Three_Dimensional_Plotting_20_0.png)
     
 
