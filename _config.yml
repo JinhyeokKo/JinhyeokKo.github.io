@@ -117,8 +117,8 @@ comments:
   giscus:
     repo: JinhyeokKo/JinhyeokKo.github.io # <gh-username>/<repo>
     repo_id: R_kgDOOkTqQQ
-    category: Announcements
-    category_id: DIC_kwDOOkTqQc4Cp9Y7
+    category: General
+    category_id: DIC_kwDOOkTqQc4Cp9Y8
     mapping: pathname # optional, default to 'pathname'
     strict: 0 # optional, default to '0'
     input_position: top # optional, default to 'bottom'
