@@ -6,44 +6,33 @@ order: 3
 
 # 📚 포스트 목차
 
-## 📂 카테고리별 목록
+{% assign all_categories = site.posts | map: "categories" | uniq | sort %}
 
-{% assign all_categories = site.categories | sort %}
+{% for cat in all_categories %}
+{% assign posts_in_cat = site.posts | where_exp: "post", "post.categories contains cat" %}
+{% assign tags_in_cat = posts_in_cat | map: "tags" | join: "," | split: "," | uniq | sort %}
 
-{% for category_pair in all_categories %}
-{% assign category = category_pair[0] %}
-{% assign posts = category_pair[1] | sort: 'date' | reverse %}
+{% if cat != "" %}
+## 📁 {{ cat }}
 
-### 📁 {{ category }}
-
-  <ul>
-  {% for post in posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small>({{ post.date | date: "%Y-%m-%d" }})</small><br>
-      <span style="font-size: 0.9em; color: gray;">🏷️ {{ post.tag }}</span>
-    </li>
-  {% endfor %}
-  </ul>
-{% endfor %}
-
-## 🏷️ 태그별 목록
-
-{% assign all_tags = site.tags | sort %}
-
-{% for tag_pair in all_tags %}
-{% assign tag = tag_pair[0] %}
-{% assign posts = tag_pair[1] | sort: 'date' | reverse %}
-
+{% for tag in tags_in_cat %}
 ### 🔖 {{ tag }}
-
   <ul>
-  {% for post in posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small>({{ post.date | date: "%Y-%m-%d" }})</small><br>
-      <span style="font-size: 0.9em; color: gray;">📂 {{ post.category }}</span>
-    </li>
-  {% endfor %}
+    {% assign tag_posts = "" | split: "" %}
+    {% for post in posts_in_cat %}
+      {% if post.tags contains tag %}
+        {% assign tag_posts = tag_posts | push: post %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign tag_posts = tag_posts | reverse %} {# 오래된 글부터 보이게 #}
+
+    {% for post in tag_posts %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a> <small>({{ post.date | date: "%Y-%m-%d" }})</small>
+      </li>
+    {% endfor %}
   </ul>
+  {% endfor %}
+  {% endif %}
 {% endfor %}
