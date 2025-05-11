@@ -8,11 +8,17 @@
 
 - type: email
   icon: "fas fa-envelope"
-  noblank: true # open link in current tab
 
-- type: rss
+- type: rss atom
+  name: "Atom Feed"
   icon: "fas fa-rss"
-  noblank: true
+  url: "/feed.xml"
+
+- type: rss 2.0
+  name: "RSS 2.0 Feed"
+  icon: "fas fa-rss"
+  url: "/rss.xml"
+
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
