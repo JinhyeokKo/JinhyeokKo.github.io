@@ -4,8 +4,6 @@ icon: fas fa-list
 order: 3
 ---
 
-# 📚 포스트 목차
-
 {% assign all_categories = site.posts | map: "categories" | uniq | sort %}
 
 {% for cat in all_categories %}
