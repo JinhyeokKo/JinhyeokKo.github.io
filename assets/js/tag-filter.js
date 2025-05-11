@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (selectedTag === "all") {
         console.log("모든 포스트 표시");
         postItems.forEach(function(item) {
-          item.style.display = "flex";
+          item.classList.remove("hidden");
+          item.style.display = "";  // 기본 표시 스타일로 복원
         });
       } else {
         postItems.forEach(function(item) {
@@ -37,14 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
           const tagsArray = postTags.trim().split(/\s+/);
 
           if (tagsArray.includes(selectedTag)) {
-            item.style.display = "flex";
+            item.classList.remove("hidden");
+            item.style.display = "";  // 기본 표시 스타일로 복원
             console.log("포스트 표시:", item.querySelector("a").textContent);
           } else {
-            item.style.display = "none";
+            item.classList.add("hidden");
+            item.style.display = "none !important";  // !important 추가
             console.log("포스트 숨김:", item.querySelector("a").textContent);
           }
         });
       }
+
+      // 필터링 상태 시각적으로 확인
+      console.log("필터링 후 표시된 포스트 수:", document.querySelectorAll(".post-item:not(.hidden)").length);
+      console.log("필터링 후 숨겨진 포스트 수:", document.querySelectorAll(".post-item.hidden").length);
     });
   });
 

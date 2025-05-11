@@ -77,6 +77,11 @@ layout: page
     margin-bottom: 0.6rem;
   }
 
+  /* 숨겨진 아이템을 위한 스타일 */
+  .post-item.hidden {
+    display: none !important;
+  }
+
   #tag-filter-buttons .btn {
     margin-right: 0.3rem;
     margin-bottom: 0.3rem;
@@ -84,18 +89,61 @@ layout: page
 
   /* 활성화된 버튼 스타일 강화 */
   #tag-filter-buttons .btn.active {
-    background-color: var(--btn-active-bg);
-    border-color: var(--btn-active-border-color);
-    color: var(--btn-active-color);
+    background-color: var(--btn-active-bg, #2a408e);
+    border-color: var(--btn-active-border-color, #253a84);
+    color: var(--btn-active-color, #ffffff);
     font-weight: bold;
+  }
+
+  /* 필터링 관련 추가 스타일 */
+  .filter-status {
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666;
   }
 </style>
 
-<!-- 디버깅용 정보 표시 영역 추가 -->
-<div id="debug-info" style="margin-top: 20px; padding: 10px; border: 1px dashed #ccc; display: none;">
-  <h4>디버깅 정보</h4>
-  <div id="debug-content"></div>
-</div>
-
 <!-- Add JavaScript for filtering -->
+<script>
+  // 인라인 스크립트 추가 (문제 해결용)
+  document.addEventListener('DOMContentLoaded', function() {
+    // 외부 스크립트가 로드되지 않았을 경우를 대비한 간단한 필터링 기능
+    const tagButtons = document.querySelectorAll('#tag-filter-buttons .btn');
+    if (!window.tagFilterInitialized) {
+      tagButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const tag = this.getAttribute('data-tag');
+          const items = document.querySelectorAll('.post-item');
+
+          // 버튼 활성화 상태 변경
+          tagButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+
+          if (tag === 'all') {
+            items.forEach(item => {
+              item.classList.remove('hidden');
+              item.style.display = '';
+            });
+          } else {
+            items.forEach(item => {
+              const tags = (item.getAttribute('data-tags') || '').trim().split(/\s+/);
+              if (tags.includes(tag)) {
+                item.classList.remove('hidden');
+                item.style.display = '';
+              } else {
+                item.classList.add('hidden');
+                item.style.display = 'none';
+              }
+            });
+          }
+        });
+      });
+
+      // 중복 실행 방지
+      window.tagFilterInitialized = true;
+    }
+  });
+</script>
+
 <script src="{{ '/assets/js/tag-filter.js' | relative_url }}"></script>
