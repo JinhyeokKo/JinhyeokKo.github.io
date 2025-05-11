@@ -2,7 +2,7 @@
 title: 01. Database System-Example
 date: 2025-04-27
 categories: [ Database With MySQL ]
-tags: [ Database, MySQL ]
+tags: [ Example ]
 layout: post
 ---
 

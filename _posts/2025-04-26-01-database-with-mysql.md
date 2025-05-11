@@ -2,7 +2,7 @@
 title: 01. Database System-Summary
 date: 2025-04-26
 categories: [ Database With MySQL ]
-tags: [ Database, MySQL ]
+tags: [ Summary ]
 layout: post
 ---
 

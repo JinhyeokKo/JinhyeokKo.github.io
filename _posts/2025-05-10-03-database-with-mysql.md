@@ -2,7 +2,7 @@
 title: 03. SQL Basics-Summary
 date: 2025-05-10
 categories: [ Database With MySQL ]
-tags: [ Database, MySQL ]
+tags: [ Summary ]
 layout: post
 ---
 

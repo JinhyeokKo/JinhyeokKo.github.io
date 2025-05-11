@@ -2,7 +2,7 @@
 title: 02. Relation Data Model-Summary
 date: 2025-05-03
 categories: [ Database With MySQL ]
-tags: [ Database, MySQL ]
+tags: [ Summary ]
 layout: post
 ---
 

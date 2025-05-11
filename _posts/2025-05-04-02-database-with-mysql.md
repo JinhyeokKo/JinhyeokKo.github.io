@@ -2,7 +2,7 @@
 title: 02. Relation Data Model-Example
 date: 2025-05-04
 categories: [ Database With MySQL ]
-tags: [ Database, MySQL ]
+tags: [ Example ]
 layout: post
 ---
 
