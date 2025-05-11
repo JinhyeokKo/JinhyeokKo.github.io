@@ -40,8 +40,7 @@ layout: page
         {% if post.tags %}
         data-tags="{% for tag in post.tags %}{{ tag | slugify }} {% endfor %}"
         {% endif %}>
-      <!-- 모바일용 레이아웃 (작은 화면에서만 표시) -->
-      <div class="post-mobile d-md-none">
+      <div class="post-container">
         <div class="post-title-row">
           <a href="{{ post.url | relative_url }}" class="post-title text-truncate">{{ post.title }}</a>
         </div>
@@ -58,25 +57,6 @@ layout: page
           </div>
         </div>
       </div>
-
-      <!-- 데스크톱용 레이아웃 (중간 이상 화면에서만 표시) -->
-      <div class="post-desktop d-none d-md-flex justify-content-between">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span class="dash flex-grow-1"></span>
-
-        <div class="post-tags me-2">
-          {% if post.tags.size > 0 %}
-          <span class="text-muted nowrap">[
-              {% for tag in post.tags %}
-                <span class="tag-badge">{{ tag }}</span>
-                {% unless forloop.last %}, {% endunless %}
-              {% endfor %}
-              ]</span>
-          {% endif %}
-        </div>
-
-        {% include datetime.html date=post.date class='text-muted small text-nowrap' lang=lang %}
-      </div>
     </li>
     {% endfor %}
   </ul>
@@ -84,28 +64,11 @@ layout: page
 
 <!-- Add CSS for styling -->
 <style>
-  .post-tags {
-    font-size: 0.85em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100px;
-  }
-
-  .nowrap {
-    white-space: nowrap;
-  }
-
-  .tag-badge {
-    color: var(--text-muted-color);
-  }
-
   .post-item {
     margin-bottom: 0.6rem;
   }
 
-  /* 모바일 레이아웃 스타일 */
-  .post-mobile {
+  .post-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -132,19 +95,24 @@ layout: page
     font-size: 0.85em;
   }
 
+  .post-tags {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 65%;
+  }
+
   .post-tags-text {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 120px;
     display: inline-block;
     vertical-align: bottom;
   }
 
-  /* 데스크톱 레이아웃은 기존 스타일 유지 */
-  .post-desktop {
-    width: 100%;
-    align-items: center;
+  .post-date {
+    white-space: nowrap;
+    text-align: right;
   }
 
   /* 숨겨진 아이템을 위한 스타일 */
@@ -165,46 +133,5 @@ layout: page
     font-weight: bold;
   }
 </style>
-
-<!-- 인라인 스크립트 (필터링) -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // 외부 스크립트가 로드되지 않았을 경우를 대비한 간단한 필터링 기능
-    const tagButtons = document.querySelectorAll('#tag-filter-buttons .btn');
-    if (!window.tagFilterInitialized) {
-      tagButtons.forEach(button => {
-        button.addEventListener('click', function() {
-          const tag = this.getAttribute('data-tag');
-          const items = document.querySelectorAll('.post-item');
-
-          // 버튼 활성화 상태 변경
-          tagButtons.forEach(btn => btn.classList.remove('active'));
-          this.classList.add('active');
-
-          if (tag === 'all') {
-            items.forEach(item => {
-              item.classList.remove('hidden');
-              item.style.display = '';
-            });
-          } else {
-            items.forEach(item => {
-              const tags = (item.getAttribute('data-tags') || '').trim().split(/\s+/);
-              if (tags.includes(tag)) {
-                item.classList.remove('hidden');
-                item.style.display = '';
-              } else {
-                item.classList.add('hidden');
-                item.style.display = 'none';
-              }
-            });
-          }
-        });
-      });
-
-      // 중복 실행 방지
-      window.tagFilterInitialized = true;
-    }
-  });
-</script>
 
 <script src="{{ '/assets/js/tag-filter.js' | relative_url }}"></script>
