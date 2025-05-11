@@ -10,12 +10,12 @@
   icon: "fas fa-envelope"
 
 - type: rss atom
-  name: "Atom Feed"
+  title: "Atom Feed"
   icon: "fas fa-rss"
   url: "/feed.xml"
 
 - type: rss 2.0
-  name: "RSS 2.0 Feed"
+  title: "RSS 2.0 Feed"
   icon: "fas fa-rss"
   url: "/rss.xml"
 
