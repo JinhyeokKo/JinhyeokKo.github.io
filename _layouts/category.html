@@ -81,8 +81,21 @@ layout: page
     margin-right: 0.3rem;
     margin-bottom: 0.3rem;
   }
+
+  /* 활성화된 버튼 스타일 강화 */
+  #tag-filter-buttons .btn.active {
+    background-color: var(--btn-active-bg);
+    border-color: var(--btn-active-border-color);
+    color: var(--btn-active-color);
+    font-weight: bold;
+  }
 </style>
 
+<!-- 디버깅용 정보 표시 영역 추가 -->
+<div id="debug-info" style="margin-top: 20px; padding: 10px; border: 1px dashed #ccc; display: none;">
+  <h4>디버깅 정보</h4>
+  <div id="debug-content"></div>
+</div>
+
 <!-- Add JavaScript for filtering -->
-<!-- 맨 아래에 추가 -->
 <script src="{{ '/assets/js/tag-filter.js' | relative_url }}"></script>
