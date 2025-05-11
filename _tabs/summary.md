@@ -25,7 +25,7 @@ order: 3
       {% endif %}
     {% endfor %}
 
-    {% assign tag_posts = tag_posts | reverse %} {# 오래된 글부터 보이게 #}
+    {% assign tag_posts = tag_posts | reverse %}
 
     {% for post in tag_posts %}
       <li>
