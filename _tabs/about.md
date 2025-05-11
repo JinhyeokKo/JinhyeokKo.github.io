@@ -1,7 +1,7 @@
 ---
 title: About
 icon: fas fa-user-circle
-order: 4
+order: 5
 ---
 
 <style>
