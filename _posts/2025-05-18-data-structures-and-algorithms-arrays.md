@@ -147,6 +147,7 @@ int value = list.get(0); // Integer → int 변환(언박싱)
 > **출력된 시간** :  
 > 기본형 배열 시간: 20ms  
 > ArrayList<Integer> 시간: 191ms  
+> 
 > **프로파일링 시간** :  
 > 기본형 배열 시간(array[i] = i; CPU 시간): 12ms  
 > ArrayList<Integer> 시간(list.add(i); CPU 시간): 109ms
