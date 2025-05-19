@@ -349,3 +349,203 @@ Integer[] newArray = list.toArray(new Integer[0]);
 | `sort(Comparator<? super E> c)`       | 리스트 정렬              | O(n log n) | `list.sort(Comparator.naturalOrder());`       |
 
 * 용량 증가가 필요한 경우 O(n)
+
+## ArrayList 구현해보기
+* List 인터페이스를 implements하여 배열로 ArrayList를 구현
+* 주요 기능 위주로 구현하였습니다.
+
+```java
+package arrays;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+public class ArrayList<E> implements List<E> {
+    private static final int DEFAULT_CAPACITY = 10;
+    private static final Object[] EMPTY_ARRAY = {};
+    Object[] array;
+    private int size;
+
+    public ArrayList() {
+        this.array = EMPTY_ARRAY;
+        this.size = 0;
+    }
+
+    public ArrayList(int capacity) {
+        this.array = new Object[capacity];
+        this.size = 0;
+    }
+
+    public void addLast(E value) {
+        ensureCapacity();
+        array[size++] = value;
+    }
+
+    @Override
+    public boolean add(E value){
+        addLast(value);
+        return true;
+    }
+
+    @Override
+    public void add(int index, E value){
+        checkIndex(index);
+        ensureCapacity();
+        for(int i = size; i > index; i--){
+            array[i] = array[i-1];
+        }
+        array[index] = value;
+        size++;
+    }
+
+    public void addFirst(E value) {
+        add(0, value);
+    }
+
+    @Override
+    public E get(int index) {
+        checkIndex(index);
+        return (E) array[index];
+    }
+
+    @Override
+    public E getFirst() {
+        return (E) array[0];
+    }
+
+    @Override
+    public E getLast() {
+        return (E) array[size - 1];
+    }
+
+    @Override
+    public E set(int index, E value) {
+        checkIndex(index);
+        array[index] = value;
+        return value;
+    }
+
+    @Override
+    public int indexOf(Object value) {
+        for(int i = 0; i < size; i++){
+            if(array[i].equals(value)){
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    @Override
+    public int lastIndexOf(Object value) {
+        for(int i = size - 1; i >= 0; i--){
+            if(array[i].equals(value)){
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    @Override
+    public boolean contains(Object value) {
+        return indexOf(value) != -1;
+    }
+
+    @Override
+    public boolean remove(Object value) {
+        int index = indexOf(value);
+        if(index == -1){
+            return false;
+        }
+        remove(index);
+        return true;
+    }
+
+    @Override
+    public E remove(int index) {
+        checkIndex(index);
+        E removed = (E) array[index];
+        for (int i = index; i < size - 1; i++) {
+            array[i] = array[i + 1];
+        }
+        array[size - 1] = null;
+        size--;
+        return removed;
+    }
+
+    @Override
+    public E removeFirst() {
+        return remove(0);
+    }
+
+    @Override
+    public E removeLast() {
+        return remove(size - 1);
+    }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
+
+    @Override
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    @Override
+    public void clear() {
+        for (int i = 0; i < size; i++) {
+            array[i] = null;
+        }
+        size = 0;
+    }
+
+    @Override
+    public Object[] toArray() {
+        return Arrays.copyOf(array, size);
+    }
+
+    @Override
+    public <T> T[] toArray(T[] a) {
+        if(a.length < size){
+            return (T[]) Arrays.copyOf(array, size, a.getClass());
+        }
+        System.arraycopy(array, 0, a, 0, size);
+        return a;
+    }
+
+    public void trimToSize() {
+        if(size < array.length){
+            Object[] newData = new Object[size];
+            System.arraycopy(array, 0, newData, 0, size);
+            array = newData;
+        }
+    }
+
+    private void ensureCapacity() {
+        if(Arrays.equals(array, EMPTY_ARRAY)){
+            array = new Object[DEFAULT_CAPACITY];
+            return;
+        }
+
+        if(size == array.length){
+            Object[] newData = new Object[array.length * 2];
+            System.arraycopy(array, 0, newData, 0, array.length);
+            array = newData;
+        }
+    }
+
+
+    private void checkIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+    }
+}
+```
