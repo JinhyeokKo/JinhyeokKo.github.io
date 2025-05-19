@@ -309,7 +309,7 @@ deque.offer(item); // 큐처럼 사용
 | 맨 뒤 삭제 | 0.77ms    | 0.74ms      | 0.9x     | 비슷함(약간 LinkedList) |
 
 
-<details>
+<details markdown="1">
 <summary>테스트 결과</summary>
 
 ```
@@ -458,7 +458,7 @@ Ratio: 0.6x
 </details>
 
 
-<details>
+<details markdown="1">
 <summary>코드 보기</summary>
 
 ```java
