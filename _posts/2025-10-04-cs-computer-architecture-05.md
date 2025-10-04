@@ -6,6 +6,7 @@ categories:
 tags:
   - 컴퓨터구조
 layout: post
+math : true
 ---
 
 ## CPU 성능 향상 기법

@@ -126,6 +126,10 @@ comments:
     reactions_enabled: 1 # optional, default to the value of `1`
     theme: preferred_color_scheme
 
+# LaTeX math rendering
+# P.S. Don't forget to enable it in your post front matter.
+math: true
+
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
