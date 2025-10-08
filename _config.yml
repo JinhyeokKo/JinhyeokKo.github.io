@@ -153,17 +153,10 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
-# 1. 게시물 상단 라이선스 문구 제거 설정
-post:
-  creative_commons:
-    enabled: true
-    license: 'CC-BY-NC-4.0'
-
-# 2. 블로그 하단(Footer)의 저작권 문구 설정
-footer:
-  license:
-    name: 'CC BY-NC 4.0'
-    href: 'https://creativecommons.org/licenses/by-nc/4.0/deed.ko'
+# post license
+license:
+  name: 'CC BY-NC 4.0'
+  href: 'https://creativecommons.org/licenses/by-nc/4.0/deed.ko'
 
 # ------------ The following options are not recommended to be modified ------------------
 
