@@ -153,11 +153,6 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
-# post license
-license:
-  name: 'CC BY-NC 4.0'
-  href: 'https://creativecommons.org/licenses/by-nc/4.0/deed.ko'
-
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
